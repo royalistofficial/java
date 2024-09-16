@@ -1,22 +1,15 @@
 /**
     * @author Бугайцев Михаил
     * @version 1.0
-    * @param нет передаваемх параметров
-    * @return нет возвращаемого значения
-    * @exception Нет исключений, генерируемых методом
-    * @throws Нет исключений, генерируемых методом
-    * @see java.lang.Object
+    * @since 1.0
 */
 public class Main {
 
     /**
      * Метод main, который запускает практики.
      * 
-     * @param args нет передаваемых параметров
+     * @param нет передаваемых параметров
      * @return нет возвращаемого значения
-     * @exception Нет исключений, генерируемых методом
-     * @throws Нет исключений, генерируемых методом
-     * @see java.lang.Object
      */
     public static void main(String[] args) {
         practice1();
@@ -28,9 +21,6 @@ public class Main {
      * 
      * @param нет передаваемых параметров
      * @return нет возвращаемого значения
-     * @exception Нет исключений, генерируемых методом
-     * @throws Нет исключений, генерируемых методом
-     * @see java.lang.Object
      */
     private static void practice1() {
         int number = 2;
@@ -79,9 +69,6 @@ public class Main {
      * 
      * @param нет передаваемых параметров
      * @return нет возвращаемого значения
-     * @exception Нет исключений, генерируемых методом
-     * @throws Нет исключений, генерируемых методом
-     * @see java.lang.Object
      */
     private static void practice2() {
 

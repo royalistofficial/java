@@ -4,11 +4,7 @@ import java.util.Collections;
 /**
     * @author Бугайцев Михаил
     * @version 1.0
-    * @param нет передаваемх параметров
-    * @return нет возвращаемого значения
-    * @exception Нет исключений, генерируемых методом
-    * @throws Нет исключений, генерируемых методом
-    * @see java.lang.Object
+    * @since 1.0
 */
 public class Main {
 
@@ -17,9 +13,6 @@ public class Main {
      * 
      * @param args нет передаваемых параметров
      * @return нет возвращаемого значения
-     * @exception Нет исключений, генерируемых методом
-     * @throws Нет исключений, генерируемых методом
-     * @see java.lang.Object
      */
     public static void main(String[] args) {
         practice1();
@@ -31,9 +24,6 @@ public class Main {
      * 
      * @param нет передаваемых параметров
      * @return нет возвращаемого значения
-     * @exception Нет исключений, генерируемых методом
-     * @throws Нет исключений, генерируемых методом
-     * @see java.lang.Object
      */
     private static void practice1() {
         int a1[] = {1, 2, 3, 4, 5};
@@ -52,9 +42,6 @@ public class Main {
      * 
      * @param нет передаваемых параметров
      * @return нет возвращаемого значения
-     * @exception Нет исключений, генерируемых методом
-     * @throws Нет исключений, генерируемых методом
-     * @see java.lang.Object
      */
     private static void practice2() {
         ArrayList<String> list = new ArrayList<>();
