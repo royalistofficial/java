@@ -12,6 +12,7 @@ public class Main {
      * Точка входа в программу.
      * 
      * @param args аргументы командной строки
+     * <img src="example.jpg" alt="Пример изображения" width="300"/>}
      */
     public static void main(String[] args) {
         Calculator calculator = new Calculator();
