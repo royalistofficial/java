@@ -1,62 +1,73 @@
 # Практика #17
 
-## Практика #1: Примеры использования `instanceof` с параметризованными классами
+## Практика 1
 
-1. Пример без ограничений:
+Приведите примеры использования оператора instanceof с объектами параметризованных классов.
 
 ```java
-class Wrapper<T> {
-    public T item;
-    public Wrapper(T item) { this.item = item; }
+class A<T> {
+    ...
 }
 
-public class Example {
+public class Main {
     public static void main(String[] args) {
-        Wrapper<String> stringWrapper = new Wrapper<>("Hello");
-        if (stringWrapper instanceof Wrapper) {
+        A<String> stringA = new A<>("Hello");
+        if (stringA instanceof A) {
+            ...
         }
     }
 }
 ```
 
-2. Пример с ограничениями:
+## Практика 2
+
+Приведите примеры использования конструкций <? extends T> и <? super T>. Объясните, зачем они нужны?
+
 
 ```java
-class NumberWrapper<T extends Number> {
-    public T item;
-    public NumberWrapper(T item) { this.item = item; }
-}
+import java.util.List;
+import java.util.ArrayList;
+
+class A {}
+class B extends A {}
 
 public class Example {
-    public static void main(String[] args) {
-        NumberWrapper<Integer> intWrapper = new NumberWrapper<>(10);
-        if (intWrapper instanceof NumberWrapper) {
+    public static void printAL(List<? extends A> AL) {
+        for (A a : AL) {
+            System.out.println(a);
         }
     }
-}
-```
 
-## Практика #2: Использование `<? extends T>` и `<? super T>`
+    public static void addB(List<? super B> AL) {
+        AL.add(new B()); 
+    }
 
-1. `<? extends T>`: Позволяет использовать подтипы `T`.
+    public static void main(String[] args) {
+        List<B> BL = List.of(new B());
+        printAL(BL); 
 
-```java
-public static void printAnimals(List<? extends Animal> animals) {
-    for (Animal animal : animals) {
-        System.out.println(animal);
+        List<A> AL = new ArrayList<>();
+        addB(AL); 
     }
 }
 ```
 
-2. `<? super T>`: Позволяет добавлять объекты типа `T` в коллекции.
+
+1. `<? extends T>`: Позволяет методам принимать списки объектов, которые являются подтипами `T`. Например, метод `printAL` может принимать список объектов типа `B`, так как `B` является подклассом `A`:
 
 ```java
-public static void addDogs(List<? super Dog> animals) {
-    animals.add(new Dog());
+public static void printAL(List<? extends A> AL) {
+    for (A a : AL) {
+        System.out.println(a);
+    }
 }
 ```
 
-### Зачем нужны эти конструкции?
+2. `<? super T>`: Позволяет методам добавлять объекты типа `T` в списки, которые могут содержать `T` или его суперклассы. Например, метод `addB` может добавлять объекты типа `B` в список объектов типа `A`:
 
-- `<? extends T>`: Гибкость для работы с подтипами.
-- `<? super T>`: Безопасное добавление объектов типа `T` в коллекции.
+```java
+public static void addB(List<? super B> AL) {
+    AL.add(new B()); 
+}
+```
+
