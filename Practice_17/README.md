@@ -14,7 +14,6 @@ public class Example {
     public static void main(String[] args) {
         Wrapper<String> stringWrapper = new Wrapper<>("Hello");
         if (stringWrapper instanceof Wrapper) {
-            System.out.println("stringWrapper is an instance of Wrapper");
         }
     }
 }
@@ -32,7 +31,6 @@ public class Example {
     public static void main(String[] args) {
         NumberWrapper<Integer> intWrapper = new NumberWrapper<>(10);
         if (intWrapper instanceof NumberWrapper) {
-            System.out.println("intWrapper is an instance of NumberWrapper");
         }
     }
 }
