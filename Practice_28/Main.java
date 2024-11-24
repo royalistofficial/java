@@ -20,7 +20,7 @@ public class Main {
         formatter.format("%.2f%n", pi);
 
         // 4. %s - строковое представление
-        String name = "Alice";
+        String name = "Misha";
         formatter.format("%s!%n", name);
 
         // 5. %h - хэш-код
