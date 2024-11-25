@@ -9,19 +9,17 @@
     @Deprecated
     @SuppressWarnings
 
-Конечно! Вот краткое описание аннотаций с одним примером для каждой:
 
 ### @Override
 Указывает, что метод переопределяет метод суперкласса.
 ```java
-class Parent {
+class A {
     void display() {}
 }
 
-class Child extends Parent {
+class B extends A {
     @Override
     void display() {
-        System.out.println("Child display");
     }
 }
 ```
